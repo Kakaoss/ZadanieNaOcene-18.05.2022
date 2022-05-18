@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity() {
         var Nastepny = findViewById<Button>(R.id.btnNastepny);
         var obraz = findViewById<ImageView>(R.id.Obraz);
         var tytul = findViewById<TextView>(R.id.NapisTytul);
-        var obrazzmiana = 1;
+        var obrazzmiana = 0;
         Poprzedni.setOnClickListener {
             obrazzmiana -= 1;
             when (obrazzmiana) {
@@ -29,8 +29,8 @@ class MainActivity : AppCompatActivity() {
                 0 -> tytul.text = "kot"
                 1 -> tytul.text = "pies"
                 2 -> tytul.text = "pingwin"
-                3 -> tytul.text = "kot"
-                4 -> tytul.text = "kot"
+                3 -> tytul.text = "tygrys"
+                4 -> tytul.text = "zyrafa"
             }
             Nastepny.setOnClickListener {
                 obrazzmiana += 1;
@@ -40,6 +40,13 @@ class MainActivity : AppCompatActivity() {
                     2 -> obraz.setImageResource(R.drawable.pingwin)
                     3 -> obraz.setImageResource(R.drawable.tygrys)
                     4 -> obraz.setImageResource(R.drawable.zyrafa)
+                }
+                when (obrazzmiana) {
+                    0 -> tytul.text = "kot"
+                    1 -> tytul.text = "pies"
+                    2 -> tytul.text = "pingwin"
+                    3 -> tytul.text = "tygrys"
+                    4 -> tytul.text = "zyrafa"
                 }
             }
         }
