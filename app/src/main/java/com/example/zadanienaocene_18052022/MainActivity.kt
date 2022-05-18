@@ -3,10 +3,7 @@ package com.example.zadanienaocene_18052022
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.Button
-import android.widget.CheckBox
-import android.widget.ImageView
-import android.widget.TextView
+import android.widget.*
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -18,6 +15,8 @@ class MainActivity : AppCompatActivity() {
         var obraz = findViewById<ImageView>(R.id.Obraz);
         var tytul = findViewById<TextView>(R.id.NapisTytul);
         var widocznosc = findViewById<CheckBox>(R.id.checkWidzialnosc);
+        var podanaprzezroczystosc = findViewById<EditText>(R.id.textPodanaPrzezroczystosc);
+        var checkPrzezroczystosc = findViewById<CheckBox>(R.id.checkPrzezroczystosc);
         var obrazzmiana = 0;
         Poprzedni.setOnClickListener {
             obrazzmiana -= 1;
@@ -58,6 +57,15 @@ class MainActivity : AppCompatActivity() {
                 }
                 else{
                     obraz.visibility = View.INVISIBLE;
+                }
+            }
+            checkPrzezroczystosc.setOnClickListener {
+                if(checkPrzezroczystosc.isChecked){
+                    val przezroczystosc = podanaprzezroczystosc.text.toString().toFloat();
+                    obraz.alpha = przezroczystosc;
+                }
+                else{
+                    obraz.alpha = 1f;
                 }
             }
         }

@@ -55,11 +55,52 @@
         android:id="@+id/checkWidzialnosc"
         android:layout_width="131dp"
         android:layout_height="48dp"
-        android:layout_marginBottom="304dp"
+        android:checked="true"
         android:text="Widoczny"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.189"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.171"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnPoprzedni"
+        app:layout_constraintVertical_bias="0.179" />
+
+    <CheckBox
+        android:id="@+id/checkPrzezroczystosc"
+        android:layout_width="153dp"
+        android:layout_height="53dp"
+        android:layout_marginBottom="76dp"
+        android:text="przezroczystosc"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.178"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textPodanaPrzezroczystosc"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/textPodanaPrzezroczystosc"
+        android:layout_width="273dp"
+        android:layout_height="53dp"
+        android:ems="10"
+        android:hint="Podaj wartosc przezroczystosci"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.851" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Jakub Wyczanowski"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.056"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.015" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
