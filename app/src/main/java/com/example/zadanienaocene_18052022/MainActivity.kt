@@ -2,7 +2,9 @@ package com.example.zadanienaocene_18052022
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
+import android.widget.CheckBox
 import android.widget.ImageView
 import android.widget.TextView
 
@@ -15,6 +17,7 @@ class MainActivity : AppCompatActivity() {
         var Nastepny = findViewById<Button>(R.id.btnNastepny);
         var obraz = findViewById<ImageView>(R.id.Obraz);
         var tytul = findViewById<TextView>(R.id.NapisTytul);
+        var widocznosc = findViewById<CheckBox>(R.id.checkWidzialnosc);
         var obrazzmiana = 0;
         Poprzedni.setOnClickListener {
             obrazzmiana -= 1;
@@ -47,6 +50,14 @@ class MainActivity : AppCompatActivity() {
                     2 -> tytul.text = "pingwin"
                     3 -> tytul.text = "tygrys"
                     4 -> tytul.text = "zyrafa"
+                }
+            }
+            widocznosc.setOnClickListener {
+                if(widocznosc.isChecked){
+                    obraz.visibility = View.VISIBLE;
+                }
+                else{
+                    obraz.visibility = View.INVISIBLE;
                 }
             }
         }
